@@ -11,6 +11,7 @@
 		2D538B46119803A6000AB4A2 /* CTSMTPAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D538B43119803A6000AB4A2 /* CTSMTPAsyncConnection.m */; };
 		2D538B48119803E2000AB4A2 /* CTSMTPAsyncConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D538B43119803A6000AB4A2 /* CTSMTPAsyncConnection.m */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		CF3FC18515177050004B7C03 /* libetpan_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B245CA144BABA4002B56DA /* libetpan_ios.a */; };
 		F81A8ADC0C03FC3B002F780A /* CTMIME_MessagePart.h in Headers */ = {isa = PBXBuildFile; fileRef = F81A8AD20C03FC3B002F780A /* CTMIME_MessagePart.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F81A8ADD0C03FC3B002F780A /* CTMIME_MessagePart.m in Sources */ = {isa = PBXBuildFile; fileRef = F81A8AD30C03FC3B002F780A /* CTMIME_MessagePart.m */; };
 		F81A8ADE0C03FC3B002F780A /* CTMIME_MultiPart.h in Headers */ = {isa = PBXBuildFile; fileRef = F81A8AD40C03FC3B002F780A /* CTMIME_MultiPart.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,7 +128,6 @@
 		F8A2FAC7144FA88F00C03DB4 /* JRLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F8A70EED0C4059E100D1D694 /* JRLog.h */; };
 		F8A70EEF0C4059E100D1D694 /* JRLog.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A70EED0C4059E100D1D694 /* JRLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8A70EF00C4059E100D1D694 /* JRLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A70EEE0C4059E100D1D694 /* JRLog.m */; };
-		F8B245CE144BAC15002B56DA /* libetpan_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B245CA144BABA4002B56DA /* libetpan_ios.a */; };
 		F8DFABF010541804003D3CC1 /* libetpan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DFAB0410541708003D3CC1 /* libetpan.framework */; };
 		F8EC5B0314C37F60006AF4D3 /* CTMIME_HtmlPart.h in Headers */ = {isa = PBXBuildFile; fileRef = F8EC5B0114C37F60006AF4D3 /* CTMIME_HtmlPart.h */; };
 		F8EC5B0414C37F60006AF4D3 /* CTMIME_HtmlPart.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EC5B0214C37F60006AF4D3 /* CTMIME_HtmlPart.m */; };
@@ -311,7 +311,7 @@
 		F8A70EED0C4059E100D1D694 /* JRLog.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = JRLog.h; path = Source/JRLog.h; sourceTree = "<group>"; };
 		F8A70EEE0C4059E100D1D694 /* JRLog.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = JRLog.m; path = Source/JRLog.m; sourceTree = "<group>"; };
 		F8D31A3109C524EA00468234 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F8DFAB0410541708003D3CC1 /* libetpan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libetpan.framework; path = "OpenSourceProjects/libetpan-0.58/build-mac/build/Release/libetpan.framework"; sourceTree = "<group>"; };
+		F8DFAB0410541708003D3CC1 /* libetpan.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libetpan.framework; path = "libetpan/build-mac/build/Release/libetpan.framework"; sourceTree = "<group>"; };
 		F8EA76110C1141C1004F85D8 /* CTCoreAddressTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTCoreAddressTests.h; path = Tests/CTCoreAddressTests.h; sourceTree = "<group>"; };
 		F8EA76120C1141C1004F85D8 /* CTCoreAddressTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTCoreAddressTests.m; path = Tests/CTCoreAddressTests.m; sourceTree = "<group>"; };
 		F8EADFAD0B3BB14D000C8371 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -348,7 +348,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B245CE144BAC15002B56DA /* libetpan_ios.a in Frameworks */,
+				CF3FC18515177050004B7C03 /* libetpan_ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +894,8 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -910,6 +912,8 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -933,7 +937,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/OpenSourceProjects/libetpan-0.58/build-mac/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/libetpan/build-mac/build/Release\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -965,7 +969,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/OpenSourceProjects/libetpan-0.58/build-mac/build/Release\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/libetpan/build-mac/build/Release\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
@@ -994,6 +998,11 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/libetpan/build-mac/build/Release-iphonesimulator\"";
 				ONLY_ACTIVE_ARCH_PRE_XCODE_3_1 = "$(NATIVE_ARCH)";
 				PREBINDING = NO;
 				PRODUCT_NAME = mailcore;
@@ -1010,6 +1019,11 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/libetpan/build-mac/build/Release-iphonesimulator\"";
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PRODUCT_NAME = mailcore;
