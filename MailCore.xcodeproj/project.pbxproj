@@ -55,20 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F890D39510CEECD50039817C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F890D38D10CEECD50039817C /* libetpan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = libetpan;
-		};
-		F890D39710CEECD50039817C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F890D38D10CEECD50039817C /* libetpan.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C69AB10A10546FE500F32FBD;
-			remoteInfo = "static libetpan";
-		};
 		F8B245C9144BABA4002B56DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F890D38D10CEECD50039817C /* libetpan.xcodeproj */;
@@ -367,8 +353,6 @@
 		F890D39010CEECD50039817C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F890D39610CEECD50039817C /* libetpan.framework */,
-				F890D39810CEECD50039817C /* libetpan_mac.a */,
 				F8B245CA144BABA4002B56DA /* libetpan_ios.a */,
 			);
 			name = Products;
@@ -424,20 +408,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F890D39610CEECD50039817C /* libetpan.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = libetpan.framework;
-			remoteRef = F890D39510CEECD50039817C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F890D39810CEECD50039817C /* libetpan_mac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libetpan_mac.a;
-			remoteRef = F890D39710CEECD50039817C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F8B245CA144BABA4002B56DA /* libetpan_ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
