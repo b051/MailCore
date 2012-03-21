@@ -3,4 +3,4 @@
 	url = https://github.com/b051/libetpan.git
 [submodule "iOSPorts"]
 	path = iOSPorts
-	url = https://github.com/bindle/iOSPorts.git
+	url = https://github.com/b051/iOSPorts.git
